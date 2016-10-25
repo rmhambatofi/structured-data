@@ -1,2 +1,2 @@
 # structured-data
-This protect allows to investigate structured data
+This project allows to investigate structured data
