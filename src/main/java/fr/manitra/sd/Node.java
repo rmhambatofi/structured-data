@@ -33,4 +33,14 @@ public class Node<T> {
     public void setNext(Node<T> next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Node{");
+        sb.append("element=").append(element);
+        sb.append(", previous=").append(previous);
+        sb.append(", next=").append(next);
+        sb.append('}');
+        return sb.toString();
+    }
 }
