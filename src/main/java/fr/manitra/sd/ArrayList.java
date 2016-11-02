@@ -57,6 +57,14 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
+    public void add(E e) {
+        if (size == data.length)
+            throw new IndexOutOfBoundsException("Array is full");
+        data[size] = e;
+        size++;
+    }
+
+    @Override
     public E remove(int i) throws IndexOutOfBoundsException {
         checkIndex(i, size);
         E temp = data[i];

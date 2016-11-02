@@ -24,4 +24,27 @@ public abstract class AbstractTree<E> implements Tree<E> {
     public boolean isEmpty() {
         return size() == 0;
     }
+
+    public int depth(Position<E> position) {
+        if (isRoot(position))
+            return 0;
+        return 1 + depth(parent(position));
+    }
+
+    public int height(Position<E> position) {
+        int h = 0;
+        for (Position<E> p : children(position)) {
+            h = Math.max(h, 1 + height(p));
+        }
+        return h;
+    }
+
+    private int heightBad() {
+        int h = 0;
+        for (Position<E> p : positions()) {
+            if (isExternal(p))
+                h = Math.max(h, depth(p));
+        }
+        return h;
+    }
 }

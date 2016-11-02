@@ -20,7 +20,9 @@ public interface List<E> {
      */
     E set(int i, E e) throws IndexOutOfBoundsException;
 
-    void add (int i, E e) throws IndexOutOfBoundsException;
+    void add(int i, E e) throws IndexOutOfBoundsException;
+
+    void add(E e);
 
     E remove(int i) throws IndexOutOfBoundsException;
 }

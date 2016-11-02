@@ -9,25 +9,25 @@ public interface PositionalList<E> {
      * Returns the number of elements in the list.
      * @return
      */
-    int size( );
+    int size();
 
     /**
      * Tests whether the list is empty.
      * @return
      */
-    boolean isEmpty( );
+    boolean isEmpty();
 
     /**
      * Returns the first Position in the list (or null, if empty).
      * @return
      */
-    Position<E> first( );
+    Position<E> first();
 
     /**
      * Returns the last Position in the list (or null, if empty).
      * @return
      */
-    Position<E> last( );
+    Position<E> last();
 
     /**
      * Returns the Position immediately before Position p (or null, if p is first).
